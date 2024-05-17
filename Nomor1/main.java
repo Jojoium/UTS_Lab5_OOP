@@ -5,21 +5,31 @@ public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Membuat objek Kucing dengan menggunakan konstruktor
+        // Meminta input dari pengguna
         System.out.println("Masukkan nama kucing: ");
         String nama = scanner.nextLine();
 
         System.out.println("Masukkan umur kucing: ");
         int umur = scanner.nextInt();
+        scanner.nextLine();  // Mengonsumsi newline
+
+        System.out.println("Masukkan warna kucing: ");
+        String warna = scanner.nextLine();
+
+        System.out.println("Masukkan jenis kelamin kucing (Jantan/Betina): ");
+        String jenisKelamin = scanner.nextLine();
+
+        System.out.println("Masukkan berat kucing (dalam kg): ");
+        double berat = scanner.nextDouble();
 
         // Membuat objek Kucing dengan konstruktor
-        Kucing kucing = new Kucing(nama, umur);
+        Kucing kucing = new Kucing(nama, umur, warna, jenisKelamin, berat);
 
         // Menampilkan informasi kucing
         kucing.displayInfo();
 
         // Menggunakan setter untuk memperbarui umur kucing
-        System.out.println("Masukkan umur baru kucing: ");
+        System.out.println("\nMasukkan umur baru kucing: ");
         int umurBaru = scanner.nextInt();
         kucing.setUmur(umurBaru);
 
@@ -33,43 +43,80 @@ class Kucing {
     // Variabel instance
     private String nama;
     private int umur;
+    private String warna;
+    private String jenisKelamin;
+    private double berat;
 
     // Konstruktor
-    public Kucing(String nama, int umur) {
+    public Kucing(String nama, int umur, String warna, String jenisKelamin, double berat) {
         this.nama = nama;
         this.umur = umur;
+        this.warna = warna;
+        this.jenisKelamin = jenisKelamin;
+        this.berat = berat;
     }
 
-    // Getter untuk nama
+    // Getter dan Setter untuk nama
     public String getNama() {
         return nama;
     }
 
-    // Setter untuk nama
     public void setNama(String nama) {
         this.nama = nama;
     }
 
-    // Getter untuk umur
+    // Getter dan Setter untuk umur
     public int getUmur() {
         return umur;
     }
 
-    // Setter untuk umur
     public void setUmur(int umur) {
         this.umur = umur;
+    }
+
+    // Getter dan Setter untuk warna
+    public String getWarna() {
+        return warna;
+    }
+
+    public void setWarna(String warna) {
+        this.warna = warna;
+    }
+
+    // Getter dan Setter untuk jenisKelamin
+    public String getJenisKelamin() {
+        return jenisKelamin;
+    }
+
+    public void setJenisKelamin(String jenisKelamin) {
+        this.jenisKelamin = jenisKelamin;
+    }
+
+    // Getter dan Setter untuk berat
+    public double getBerat() {
+        return berat;
+    }
+
+    public void setBerat(double berat) {
+        this.berat = berat;
     }
 
     // Method untuk menampilkan informasi kucing
     public void displayInfo() {
         System.out.println("Nama Kucing: " + nama);
         System.out.println("Umur Kucing: " + umur + " tahun");
+        System.out.println("Warna Kucing: " + warna);
+        System.out.println("Jenis Kelamin Kucing: " + jenisKelamin);
+        System.out.println("Berat Kucing: " + berat + " kg");
     }
 
     // Overloading method displayInfo untuk menampilkan pesan tambahan
     public void displayInfo(String pesanTambahan) {
         System.out.println("Nama Kucing: " + nama);
         System.out.println("Umur Kucing: " + umur + " tahun");
+        System.out.println("Warna Kucing: " + warna);
+        System.out.println("Jenis Kelamin Kucing: " + jenisKelamin);
+        System.out.println("Berat Kucing: " + berat + " kg");
         System.out.println(pesanTambahan);
     }
 }
@@ -78,8 +125,8 @@ class Kucing {
 class KucingAnggora extends Kucing {
     private String warnaBulu;
 
-    public KucingAnggora(String nama, int umur, String warnaBulu) {
-        super(nama, umur); // Memanggil konstruktor superclass
+    public KucingAnggora(String nama, int umur, String warna, String jenisKelamin, double berat, String warnaBulu) {
+        super(nama, umur, warna, jenisKelamin, berat); // Memanggil konstruktor superclass
         this.warnaBulu = warnaBulu;
     }
 
