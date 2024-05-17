@@ -137,3 +137,10 @@ class KucingAnggora extends Kucing {
         System.out.println("Warna Bulu: " + warnaBulu);
     }
 }
+
+
+//        Class dan Object: Untuk mendefinisikan struktur dan perilaku kucing dan memungkinkan pembuatan objek kucing yang spesifik.
+//        Constructor: Untuk memastikan bahwa objek kucing diinisialisasi dengan benar saat dibuat.
+//        Method Overloading: Untuk memberikan fleksibilitas dalam menampilkan informasi kucing dengan atau tanpa pesan tambahan.
+//        Method Overriding: Untuk memungkinkan subclass (KucingAnggora) menyediakan implementasi khusus dari method yang sudah ada di superclass (Kucing).
+//        Setter dan Getter: Untuk mengontrol akses ke atribut kelas dan memastikan enkapsulasi.
