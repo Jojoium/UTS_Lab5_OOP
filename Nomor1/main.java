@@ -1,3 +1,5 @@
+// 221401035 Lab-5
+
 import java.util.Scanner;
 
 // Kelas utama
