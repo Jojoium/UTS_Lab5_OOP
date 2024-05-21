@@ -1,4 +1,4 @@
-**Ouput Program: **
+**Ouput Program:**
 
 **Nomor 2:**<br>
 ![image](https://github.com/Jojoium/UTS_Lab5_OOP/assets/114537894/d17726d1-9e85-4d15-8e8f-978d7d1255f5)
